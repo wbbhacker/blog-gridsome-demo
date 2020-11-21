@@ -6,5 +6,14 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: []
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/blog/**/*.md',
+        typeName: 'BlogPost',
+      },
+    },
+    
+  ]
 }
